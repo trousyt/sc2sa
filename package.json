@@ -1,0 +1,25 @@
+{
+  "name": "sc2sa",
+  "version": "1.0.0",
+  "description": "Podcast conversion from SoundCloud to SermonAudio",
+  "main": "index.js",
+  "repository": "https://github.com/trousyt/sc2sa.git",
+  "author": "Troy Parkinson <troy@theparki5.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "app": "node app.js"
+  },
+  "devDependencies": {
+    "jade": ""
+  },
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "node": "^9.8.0",
+    "q": "^1.5.1",
+    "winston": "^2.4.1",
+    "xml-writer": "^1.7.0"
+  }
+}

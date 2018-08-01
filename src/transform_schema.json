@@ -1,0 +1,143 @@
+{
+  "channel": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Channel",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique ID for the channel"
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the channel"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description or subtitle of the channel"
+      },
+      "link": {
+        "type": "string",
+        "description": "URI to the resource documenting the channel"
+      },
+      "category": {
+        "type": "string",
+        "description": "Category of the channel"
+      },
+      "explicit": {
+        "type": "string",
+        "description": "Channel is explicit, Yes or No"
+      },
+      "author": {
+        "type": "string",
+        "description": "Author of the channel"
+      },
+      "tags": {
+        "type": "string",
+        "description": "Comma-separated list of tags or keywords"
+      },
+      "image": {
+        "type": "string",
+        "description": "URI to the channel image file. Per Apple, it must be between 1400px-3000px square at 72dpi in JPEG of PNG format."
+      },
+      "owner": {
+        "title": "Owner",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Owner name/username of the channel owner"
+          },
+          "email": {
+            "type": "string",
+            "description": "Email address of the channel owner"
+          }
+        }
+      },
+      "pubDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifiedDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+
+      "items": {
+        "title": "Channel Items",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique ID of the item"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the item"
+          },
+          "link": {
+            "type": "string",
+            "description": "URI to more details about the item"
+          },
+          "description": {
+            "type": "string",
+            "description": "Synopsis for the item"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the item"
+          },
+          "category": {
+            "type": "string",
+            "description": "Category of the item"
+          },
+          "enclosure": {
+            "type": "object",
+            "description": "Describes media objects attached to the item",
+            "properties": {
+              "uri": {
+                "type": "string",
+                "description": "URI to the media file"
+              },
+              "type": {
+                "type": "string",
+                "description": "Media type of the file"
+              },
+              "length": {
+                "type": "number",
+                "description": "Length of the file in bytes"
+              }
+            }
+          },
+          "pubDate": {
+            "type": "string",
+            "description": "Indicates when the item was published"
+          },
+          "source": {
+            "type": "string",
+            "description": "RSS channel that the item came from"
+          },
+          "duration": {
+            "type": "number",
+            "description": "Duration of the item"
+          },
+          "image": {
+            "type": "string",
+            "description": "URI to the image file for the item"
+          },
+          "tags": {
+            "type": "string",
+            "description": "Comma-separated list of tags or keywords"
+          }
+        },
+        "required": [
+          "id", "link", "title", "description", "author", "category", "enclosure", "pubDate", "duration", "image"
+        ]
+      }
+
+    },
+    "required": [
+      "id", "title", "description", "explicit", "link", "items", "pubDate", "owner", "image", "tags"
+    ]
+  } 
+}

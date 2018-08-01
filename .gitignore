@@ -56,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# temp dev notes
+.notes
+
+# sensitive project files
+config.js
